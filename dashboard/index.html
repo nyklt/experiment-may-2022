@@ -1,1 +1,277 @@
-it works
+<!DOCTYPE html>
+<html lang="en" class="h-screen">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Dashboard</title>
+    
+</head>
+
+<body class="h-screen m-0 p-0">
+    <div class="bg-gray-50 p-5 mb-5">
+        <h3 class="text-gray-700 text-3xl font-medium">Dashboard</h3>
+    </div>
+    <div class='mx-3'>
+      
+            <div class="flex flex-wrap justify-between mb-10">
+                <div class="w-full sm:w-1/2 sm:pr-3 xl:w-1/4 xl:pr-3">
+                    <div class="flex items-center px-5 py-6 drop-shadow-md bg-white">
+                        <div class="p-3 rounded-full bg-slate-300">
+                            <svg class="h-8 w-8 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                class="icon-user">
+                                <path class="primary" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M15.998 8.12a4 4 0 11-7.996-.241 4 4 0 017.996.242zm1.463 5.726a9 9 0 00-1.818-1.078 6.034 6.034 0 001.415-1.538 6 6 0 10-8.7 1.538c-.651.288-1.261.651-1.82 1.078A8.985 8.985 0 003 21a1 1 0 102 0 7.002 7.002 0 0114 0 1 1 0 102 0 8.985 8.985 0 00-3.539-7.154z" />
+                            </svg>
+                        </div>
+
+                        <div class="mx-5">
+                            <h4 class="text-2xl font-semibold text-gray-700">77</h4>
+                            <div class="text-gray-500">Leads</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full sm:w-1/2 xl:w-1/4 xl:pr-3">
+                    <div class="flex items-center px-5 py-6 drop-shadow-md bg-white">
+                        <div class="p-3 rounded-full bg-slate-300">
+                            <svg class="h-8 w-8 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                class="icon-user">
+                                <path class="primary" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M15.998 8.12a4 4 0 11-7.996-.241 4 4 0 017.996.242zm1.463 5.726a9 9 0 00-1.818-1.078 6.034 6.034 0 001.415-1.538 6 6 0 10-8.7 1.538c-.651.288-1.261.651-1.82 1.078A8.985 8.985 0 003 21a1 1 0 102 0 7.002 7.002 0 0114 0 1 1 0 102 0 8.985 8.985 0 00-3.539-7.154z" />
+                            </svg>
+                        </div>
+
+                        <div class="mx-5">
+                            <h4 class="text-2xl font-semibold text-gray-700">5,272</h4>
+                            <div class="text-gray-500">Clients</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full sm:w-1/2 sm:pr-3 xl:w-1/4 xl:pr-3">
+                    <div class="flex items-center px-5 py-6 drop-shadow-md bg-white">
+                        <div class="p-3 rounded-full bg-slate-300">
+                            <svg class="h-8 w-8 fill-white" fill="" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" class="icon-cart">
+                                <path class="primary" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M7.171 4.424v.001L7.345 5H20a1 1 0 01.942 1.336l-2.5 7A1 1 0 0117.5 14H9a1 1 0 01-.946-.676l-.231-.674v-.001L5.653 6.324a.994.994 0 01-.012-.037l-.213-.711v-.001L5.255 5H4a1 1 0 010-2h2a1 1 0 01.958.713l.213.711zm11.43 13.377V17.8A1 1 0 0018 16H8.999a1 1 0 00-.6 1.8 2 2 0 103.333.2h3.535A1.99 1.99 0 0015 19a2 2 0 104 0c0-.45-.149-.865-.4-1.2zM17 19zM8 7h10.581l-1.786 5h-7.08L8 7z" />
+                            </svg>
+                        </div>
+
+                        <div class="mx-5">
+                            <h4 class="text-2xl font-semibold text-gray-700">9.9752$</h4>
+                            <div class="text-gray-500">Sales</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full sm:w-1/2 xl:w-1/4">
+                    <div class="flex items-center px-5 py-6 drop-shadow-md bg-white">
+                        <div class="p-3 rounded-full bg-slate-300">
+
+                            <svg class="h-8 w-8 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                class="icon-graph">
+                                <path class="primary" d="M4 4a1 1 0 00-2 0v17a1 1 0 001 1h17a1 1 0 100-2H4V4z" />
+                                <path class="primary"
+                                    d="M19 9c-.09 0-.177-.006-.264-.017l-3.943 5.127a1 1 0 01-1.418.17l-1.708-1.366-1.814 2.332a2 2 0 11-1.579-1.228l2.437-3.132a1 1 0 011.414-.167l1.704 1.363 3.322-4.318A2 2 0 1119 9z" />
+                            </svg>
+                        </div>
+
+                        <div class="mx-5">
+                            <h4 class="text-2xl font-semibold text-gray-700">234%</h4>
+                            <div class="text-gray-500">Performance</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='flex flex-wrap sm:flex-nowrap xl:flex-nowrap mb-10'>
+            <div class="shadow-lg rounded-lg overflow-hidden w-full sm:w-1/2 xl:w-1/2 mr-3">
+                <div class="py-3 px-5 bg-gray-50">Sales</div>
+                <canvas class="p-10" id="chartLine"></canvas>
+              </div>
+              <div class="shadow-lg rounded-lg overflow-hidden w-full sm:w-1/2 xl:w-1/2">
+                <div class="py-3 px-5 bg-gray-50">Performance</div>
+                <canvas class="p-10" id="chartBar"></canvas>
+              </div>
+            </div>
+           
+            <div class="flex flex-col">
+                <div class="overflow-x-auto">
+                  <div class="inline-block min-w-full">
+                    <div class="overflow-hidden">
+                      <table class="min-w-full">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th
+                                    class="text-sm px-6 py-3 border-b border-gray-200 font-medium leading-4 px-6 py-4 text-left text-gray-500 uppercase">
+                                    Name</th>
+                                <th
+                                    class="text-sm px-6 py-3 border-b border-gray-200 font-medium leading-4 px-6 py-4 text-left text-gray-500 uppercase">
+                                    Title</th>
+                                <th
+                                    class="text-sm px-6 py-3 border-b border-gray-200 font-medium leading-4 px-6 py-4 text-left text-gray-500 uppercase">
+                                    Company</th>
+                                <th
+                                    class="text-sm px-6 py-3 border-b border-gray-200 font-medium leading-4 px-6 py-4 text-left text-gray-500 uppercase">
+                                    City</th>
+                                <th
+                                    class="text-sm px-6 py-3 border-b border-gray-200 font-medium leading-4 px-6 py-4 text-left text-gray-500 uppercase">
+                                    Status</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody class="bg-white">
+                            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                                <td class="px-6 py-4  border-b border-gray-200">
+                                    <div class="text-sm font-medium text-gray-900">John Doe</div>
+                                    <div class="text-sm text-gray-500">john@example.com</div>
+                                </td>
+
+                                <td class="px-6 py-4  border-b border-gray-200">
+                                    <div class="text-sm text-gray-900">Software Engineer</div>
+                                    <div class="text-sm text-gray-500">Web dev</div>
+                                </td>
+                                <td
+                                    class="px-6 py-4  border-b border-gray-200 text-sm text-gray-500">
+                                    Company name</td>
+                                <td
+                                    class="px-6 py-4  border-b border-gray-200 text-sm text-gray-500">
+                                    City</td>
+                                <td class="px-6 py-4  border-b border-gray-200">
+                                    <span
+                                        class="px-2 inline-flex text-xs font-semibold rounded-full bg-green-100 text-green-800">Active</span>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                                <td class="px-6 py-4  border-b border-gray-200">
+                                    <div class="text-sm font-medium text-gray-700">John Doe</div>
+                                    <div class="text-sm text-gray-500">john@example.com</div>
+                                </td>
+
+                                <td class="px-6 py-4  border-b border-gray-200">
+                                    <div class="text-sm text-gray-700">Software Engineer</div>
+                                    <div class="text-sm text-gray-500">Web dev</div>
+                                </td>
+                                <td
+                                    class="px-6 py-4  border-b border-gray-200 text-sm text-gray-500">
+                                    Company name</td>
+                                <td
+                                    class="px-6 py-4  border-b border-gray-200 text-sm text-gray-500">
+                                    City</td>
+                                <td class="px-6 py-4  border-b border-gray-200">
+                                    <span
+                                        class="px-2 inline-flex text-xs font-semibold rounded-full bg-green-100 text-green-800">Active</span>
+                                </td>
+                            </tr>
+
+                            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                                <td class="px-6 py-4  border-b border-gray-200">
+                                    <div class="text-sm font-medium text-gray-700">John Doe</div>
+                                    <div class="text-sm text-gray-500">john@example.com</div>
+                                </td>
+
+                                <td class="px-6 py-4  border-b border-gray-200">
+                                    <div class="text-sm text-gray-700">Software Engineer</div>
+                                    <div class="text-sm text-gray-500">Web dev</div>
+                                </td>
+                                <td
+                                    class="px-6 py-4  border-b border-gray-200 text-sm text-gray-500">
+                                    Company name</td>
+                                <td
+                                    class="px-6 py-4  border-b border-gray-200 text-sm text-gray-500">
+                                    City</td>
+                                <td class="px-6 py-4  border-b border-gray-200">
+                                    <span
+                                        class="px-2 inline-flex text-xs font-semibold rounded-full bg-green-100 text-green-800">Active</span>
+                                </td>
+                            </tr>
+
+                            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                                <td class="px-6 py-4  border-b border-gray-200">
+                                    <div class="text-sm font-medium text-gray-700">John Doe</div>
+                                    <div class="text-sm text-gray-500">john@example.com</div>
+                                </td>
+
+                                <td class="px-6 py-4  border-b border-gray-200">
+                                    <div class="text-sm text-gray-700">Software Engineer</div>
+                                    <div class="text-sm text-gray-500">Web dev</div>
+                                </td>
+                                <td
+                                    class="px-6 py-4  border-b border-gray-200 text-sm text-gray-500">
+                                    Company name</td>
+                                <td
+                                    class="px-6 py-4  border-b border-gray-200 text-sm text-gray-500">
+                                    City</td>
+                                <td class="px-6 py-4  border-b border-gray-200">
+                                    <span
+                                        class="px-2 inline-flex text-xs font-semibold rounded-full bg-green-100 text-green-700">Active</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+           </div>   
+           </div>
+</body>
+<script>
+    const labels = ["January", "February", "March", "April", "May", "June"];
+    const data = {
+      labels: labels,
+      datasets: [
+        {
+          label: "Sales",
+          backgroundColor: "hsl(252, 82.9%, 67.8%)",
+          borderColor: "hsl(252, 82.9%, 67.8%)",
+          data: [0, 10, 5, 2, 20, 30, 45],
+        },
+      ],
+    };
+  
+    const configLineChart = {
+      type: "line",
+      data,
+      options: {},
+    };
+  
+    var chartLine = new Chart(
+      document.getElementById("chartLine"),
+      configLineChart
+    );
+  </script>
+
+<script>
+    const labelsBarChart = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+    ];
+    const dataBarChart = {
+      labels: labelsBarChart,
+      datasets: [
+        {
+          label: "Performance",
+          backgroundColor: "hsl(252, 82.9%, 67.8%)",
+          borderColor: "hsl(252, 82.9%, 67.8%)",
+          data: [0, 10, 5, 2, 20, 30, 45],
+        },
+      ],
+    };
+  
+    const configBarChart = {
+      type: "bar",
+      data: dataBarChart,
+      options: {},
+    };
+  
+    var chartBar = new Chart(
+      document.getElementById("chartBar"),
+      configBarChart
+    );
+  </script>
+</html>
