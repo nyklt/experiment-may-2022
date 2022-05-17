@@ -4,7 +4,7 @@ module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'dummy-ember-app',
     environment,
-    rootURL: '/',
+    rootURL: '/ember/',
     locationType: 'history',
     EmberENV: {
       FEATURES: {
