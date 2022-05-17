@@ -10,7 +10,10 @@ if [ "$(docker ps -aq --filter name=$RLIB_DOCKER_CONTAINER)" ]; then
 fi
 
 echo Running $RLIB_DOCKER_CONTAINER docker container...
-docker create -p 3300:9001 --name $RLIB_DOCKER_CONTAINER -i nginx
+docker create -p 8080:8080 --name $RLIB_DOCKER_CONTAINER -i nginx
 docker cp $DIR/nginx.conf $(docker ps -aq --filter name=$RLIB_DOCKER_CONTAINER):etc/nginx/nginx.conf
-docker cp $DIR/../assets $(docker ps -aq --filter name=$RLIB_DOCKER_CONTAINER):/
+docker cp $DIR/cdn-assets $(docker ps -aq --filter name=$RLIB_DOCKER_CONTAINER):/
+docker cp $DIR/login $(docker ps -aq --filter name=$RLIB_DOCKER_CONTAINER):/
+docker cp $DIR/dashboard $(docker ps -aq --filter name=$RLIB_DOCKER_CONTAINER):/
+docker cp $DIR/checkout $(docker ps -aq --filter name=$RLIB_DOCKER_CONTAINER):/
 docker start $(docker ps -aq --filter name=$RLIB_DOCKER_CONTAINER)

@@ -8,7 +8,9 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      external: /^lit/,
+      /*If we want to publish standalone components we don't externalize lit,
+      if you are going to use lit in your own project, you can make it a dep instead.*/
+      //external: /^lit/,
     },
   },
 });
