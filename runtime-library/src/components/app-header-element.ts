@@ -18,14 +18,7 @@ export class AppHeader extends LitElement {
 
   render() {
     return html`
-      <style>
-        /* 
-        We are importing it just for demo purposes, there are few options we may take for that
-          1) Create a specific css file (only with needed css classes)
-          2) We may crete our own css classes following rup-style but not importing them
-        */
-        @import 'styles.css';
-      </style>
+      <link rel="stylesheet" href="http://localhost:3300/rup-styles.css" />
       <!-- To future investigation: spread attrs operator -> https://github.com/lit/lit/pull/1960 -->
       <header class="rup-global-header">
         <div>
