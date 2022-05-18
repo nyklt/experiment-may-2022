@@ -149,3 +149,51 @@ p {
 .body {
   padding: 15px;
 }
+
+
+.search-wrapper .search1 {
+  padding: 10px 0;
+}
+
+.search-wrapper .search2 {
+  padding: 10px 0;
+}
+
+.content-wrapper {
+  display: flex;
+  border: 1px solid lightgrey;
+  margin-top: 20px;
+}
+
+.content-wrapper .content {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.content-wrapper .aside1, .content-wrapper .aside2 {
+  min-width: 200px;
+  border: 1px solid lightgrey;
+}
+
+.content ul {
+  list-style-type: none;
+}
+
+.content li {
+  display: flex;
+}
+
+.content li span {
+  flex-grow: 1;
+  border-bottom: 1px dotted lightgray;
+  padding: 10px 0;
+  line-height: 1;
+}
+
+.content li button {
+  background-color: white;
+    border: 1px solid lightgrey;
+    padding: 0 10px;
+    font-size: 14px;
+}
+

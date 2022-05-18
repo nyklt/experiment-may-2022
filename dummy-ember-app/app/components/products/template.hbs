@@ -1,0 +1,7 @@
+<ul class='products'>
+    {{#each @products as |product|}}
+    <li>
+        <Products::ProductItem @product={{product}}></Products::ProductItem>
+    </li>
+    {{/each}}
+</ul>
