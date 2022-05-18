@@ -623,6 +623,7 @@ let AppHeader = class extends s {
     this.showAppSwitcher = !this.showAppSwitcher;
   }
   render() {
+    console.log("Rendering app-header");
     return $`
       <link rel="stylesheet" href="http://localhost:8080/cdnassets/rup-styles.css" />
       <!-- To future investigation: spread attrs operator -> https://github.com/lit/lit/pull/1960 -->
@@ -717,4 +718,5 @@ __decorateClass([
 AppHeader = __decorateClass([
   n$1("app-header")
 ], AppHeader);
+console.log("Parsing app-header");
 export { AppHeader };

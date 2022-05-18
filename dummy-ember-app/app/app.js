@@ -9,4 +9,8 @@ export default class App extends Application {
   Resolver = Resolver;
 }
 
+window.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM fully loaded and parsed');
+});
+
 loadInitializers(App, config.modulePrefix);
