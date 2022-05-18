@@ -1,0 +1,33 @@
+<div class="search-wrapper">
+    {{#if @model.featureFlags.isSearch1}}
+    <div class="search1">
+        <label>Search 1</label>
+        <input type="text" placeholder="Search 2"/>
+    </div>
+    {{/if}}
+
+    {{#if @model.featureFlags.isSearch2}}
+    <div class="search2">
+        <label>Search 2</label>
+        <input type="text" placeholder="Search 2"/>
+    </div>
+    {{/if}}
+</div>
+
+<div class="content-wrapper">
+    {{#if @model.featureFlags.isSide1}}
+    <aside class="aside1">
+        Test
+    </aside>
+    {{/if}}
+
+    <section class="content">
+        <Products @products={{@model.products}}></Products>
+    </section>
+
+    {{#if @model.featureFlags.isSide2}}
+    <aside class="aside1">
+        Test 2
+    </aside>
+    {{/if}}
+</div>

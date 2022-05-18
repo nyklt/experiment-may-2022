@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>DummyEmberApp</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     {{content-for "head"}}
 
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/dummy-ember-app.css">
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css" />
+    <link
+      rel="stylesheet"
+      href="http://localhost:8080/cdnassets/rup-styles.css"
+    />
+    <link
+      integrity=""
+      rel="stylesheet"
+      href="{{rootURL}}assets/dummy-ember-app.css"
+    />
 
     {{content-for "head-footer"}}
   </head>
@@ -18,6 +26,12 @@
 
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/dummy-ember-app.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      type="module"
+      src="http://localhost:8080/cdnassets/runtime-library.es.js"
+    ></script>
 
     {{content-for "body-footer"}}
   </body>
