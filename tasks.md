@@ -6,7 +6,8 @@
 [x] Integrate app switcher into apps (the production version) like from CDN !\
 	[x] Render application menus in the app header\
 	[x] Render a basic logo in the app header\
-[ ] Basic Logging API\
+[ ] in-element render as alternative to app-header in framework lifecycle
+[ ] dialog component
 
 ## React app (Pepe +)
 
@@ -19,19 +20,21 @@
 
 ## Ember app (Cristina + Alberto)
 
-[ ] Render all products from local storage\
-[ ] Add to cart\
-[ ] Read feature flags from local storage\
-[ ] Extend the ember layout\
-[ ] Render two search controls based on feature flags\
-[ ] Render two side panels based on feature flags\
+[x] Render all products from local storage\
+[x] Add to cart\
+[x] Read feature flags from local storage\
+[x] Extend the ember layout\
+[x] Render two search controls based on feature flags\
+[x] Render two side panels based on feature flags\
 [ ] Explore lazy loading of components based on feature flags !\
+[ ] Render dialog from runtime library using in-element
+[ ] Adding a product to the cart shows a dialog saying "added to cart" and two buttons: "proceed to checkout" and "buy now"
 
 ## Checkout app (Denisa)
 
-[ ] Render selected products from local storage\
-[ ] Remove from cart\
-[ ] Checkout confirmation clears cart\
+[x] Render selected products from local storage\
+[x] Remove from cart\
+[x] Checkout confirmation clears cart\
 
 # Commands
 
