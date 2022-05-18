@@ -24,7 +24,15 @@ i.icon {
 
 .welcome{
   position: relative;
-  top: 40px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.welcome > h3{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
