@@ -14,6 +14,7 @@ export class AppHeader extends LitElement {
   }
 
   render() {
+    console.log('Rendering app-header');
     return html`
       <link rel="stylesheet" href="http://localhost:8080/cdnassets/rup-styles.css" />
       <!-- To future investigation: spread attrs operator -> https://github.com/lit/lit/pull/1960 -->
@@ -108,3 +109,4 @@ declare global {
     'app-header': AppHeader;
   }
 }
+console.log('Parsing app-header');

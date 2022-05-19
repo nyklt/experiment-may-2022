@@ -23,15 +23,20 @@
   </head>
   <body>
     {{content-for "body"}}
+    <!-- Load runtime library first -->
+    <script
+      type="module"
+      src="http://localhost:8080/cdnassets/runtime-library.es.js"
+    ></script>
+
+    <!-- It load global controls first -->
+    <!-- Then when ember starts loding it load everything else -->
+    <app-header></app-header>
 
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/dummy-ember-app.js"></script>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <script
-      type="module"
-      src="http://localhost:8080/cdnassets/runtime-library.es.js"
-    ></script>
 
     {{content-for "body-footer"}}
   </body>
