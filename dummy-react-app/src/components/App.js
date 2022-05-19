@@ -17,8 +17,15 @@ function App() {
     });
   
     setProducts(newProductList);
+    showAddedNotification();
   };
-
+  function showAddedNotification() {
+    return(
+      <div>
+        notification added
+      </div>
+    )
+  }
   const removeCartHandler = (cart) => {
     const newContactList = carts.filter((cartSelected) => {
       return cart !== cartSelected;
@@ -59,7 +66,7 @@ function App() {
         className="plus circle icon"
         style={{ color: "green", marginTop: "7px" }}
         onClick={() => addContactHandler(product)}
-      ></i>
+      ></i>     
       </div>
     );
   });
@@ -71,7 +78,7 @@ function App() {
           <div className="header">{cart}</div>
         </div>
         <i
-        className="trash alternate outline icon"
+        className="trash alternate icon"
         style={{ color: "red", marginTop: "7px" }}
         onClick={() => removeCartHandler(cart)}
       ></i>
@@ -80,17 +87,17 @@ function App() {
   });
   return (
     <div className="ui main">
-      <div className="welcome"> 
-        <h3>Welcome to the Products Page</h3>
-      
+      <div className="relative flex flex-col justify-center"> 
+        <h3 className="flex flex-col justify-center items-center text-xl font-bold" >Welcome to the Products Page</h3>    
         <div className="ui celled list">
           {renderProductsList}
         </div>
       </div>
-
-      <div className="welcome"> 
-        <h3>Welcome to the Cart Page</h3>
-      
+      <br></br>
+      <br></br>
+      <br></br>
+      <div className="relative flex flex-col justify-center"> 
+        <h3 className="flex flex-col justify-center items-center text-xl font-bold">Welcome to the Cart Page</h3>
         <div className="ui celled list">
           {renderCartList}
         </div>
