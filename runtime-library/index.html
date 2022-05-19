@@ -17,13 +17,7 @@
   <body>
     <app-header>
       <!--START: LOGO Slot-->
-      <a
-        slot="logo"
-        id="ember3"
-        class="ember-view active rup-global-header__application-logo"
-        aria-label="Logo"
-        data-test-app-logo=""
-        href="#"
+      <a slot="logo" class="rup-global-header__application-logo" aria-label="Logo" data-test-app-logo="" href="#"
         ><svg
           class="rightfind-suite-gateway"
           width="129"
@@ -49,20 +43,10 @@
         aria-labelledby="rup-rfsg-main-menu-desc"
         data-test-main-menu="">
         <p id="rup-rfsg-main-menu-desc" class="rup-visually-hidden">The application's main menu</p>
-        <a
-          id="ember4"
-          class="ember-view active rup-global-header__application-menu-item rup-global-header__application-menu-item--selected"
-          title="Dashboard"
-          data-test-dashboard-link=""
-          href="#"
+        <a class="rup-global-header__application-menu-item" title="Dashboard" data-test-dashboard-link="" href="#"
           >Dashboard</a
         >
-        <a
-          id="ember5"
-          class="ember-view rup-global-header__application-menu-item"
-          title="Libraries"
-          data-test-libraries-link=""
-          href="#"
+        <a class="rup-global-header__application-menu-item" title="Libraries" data-test-libraries-link="" href="#"
           >Libraries</a
         >
       </nav>
@@ -70,8 +54,8 @@
       <!--START: LOCAL CONTROLS Slot-->
       <div slot="local-controls" class="rup-global-header__local-controls">
         <a
-          id="ember6"
-          class="ember-view rup-global-header__local-controls-link"
+          id="cartButton"
+          class="rup-global-header__local-controls-link"
           title="Cart"
           data-test-shopping-cart-link=""
           href="#">
@@ -103,5 +87,42 @@
         <!--END: USER MENU Slot-->
       </div>
     </app-header>
+    <app-dialog>
+      <div
+        slot="dialog"
+        class="rup-dialog"
+        role="dialog"
+        aria-labelledby="dialog3_label"
+        aria-describedby="dialog3_desc"
+        aria-modal="true">
+        <header class="rup-dialog__title">
+          <h1 id="dialog1_label">Title goes here</h1>
+          <button id="dissmissButton" class="rup-dialog__close rup-icon-btn rup-icon-btn--neutral" type="button">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="icon-clear">
+              <path
+                class="primary"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L12 10.586l6.293-6.293a1 1 0 111.414 1.414L13.414 12l6.293 6.293a1 1 0 01-1.414 1.414L12 13.414l-6.293 6.293a1 1 0 01-1.414-1.414L10.586 12 4.293 5.707a1 1 0 010-1.414z"></path>
+            </svg>
+          </button>
+        </header>
+        <div class="rup-dialog__content">I am the dialog body</div>
+        <footer class="rup-dialog__controls">
+          <button id="alertButton" class="rup-btn" type="button">Display Alert</button>
+          <button id="closeButton" class="rup-btn" type="button">Close</button>
+        </footer>
+      </div>
+    </app-dialog>
+    <script type="text/javascript">
+      const appDialog = document.querySelector('app-dialog');
+      const cartButton = document.querySelector('#cartButton');
+      const closeButton = document.querySelector('#closeButton');
+      const dissmissButton = document.querySelector('#dissmissButton');
+      const alertButton = document.querySelector('#alertButton');
+      cartButton.onclick = () => appDialog.showModal();
+      closeButton.onclick = dissmissButton.onclick = () => appDialog.close();
+      alertButton.onclick = () => alert('whatever');
+    </script>
   </body>
 </html>
