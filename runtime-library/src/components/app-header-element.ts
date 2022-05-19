@@ -3,9 +3,6 @@ import { customElement, state } from 'lit/decorators.js';
 
 /**
  * Header element.
- *
- * @slot - This element has a slot
- * @csspart button - The button
  */
 @customElement('app-header')
 export class AppHeader extends LitElement {
