@@ -1,14 +1,16 @@
 import Component from '@glimmer/component';
-import { tracked } from '@glimmer/tracking';
 
-const cartKey = 'cart';
+const cartKey = 'products_ember';
 
 export default class ModalDialog extends Component {
-    @tracked retrieveCartData;
+
+    get cartData(){
+        let retrieveCartData;
+        let retriveCartItems = localStorage.getItem(cartKey);
+        return retrieveCartData = JSON.parse(retriveCartItems);
+    }
 
     get appDialogModal() {
-        let retriveCartItems = localStorage.getItem(cartKey);;
-        this.retrieveCartData = JSON.parse(retriveCartItems);
         return document.querySelector('app-dialog');
     }
 }
