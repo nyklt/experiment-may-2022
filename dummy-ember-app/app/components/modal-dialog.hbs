@@ -1,0 +1,28 @@
+{{#in-element this.appDialogModal}}
+<div slot="dialog">
+    <div class="rup-dialog" role="dialog" aria-labelledby="dialog1_label" aria-describedby="dialog1_desc"
+        aria-modal="true">
+        <header class="rup-dialog__title">
+            <h1 id="dialog1_label">Added to cart</h1>
+            <button class="rup-dialog__close rup-icon-btn rup-icon-btn--neutral" type="button"   {{on 'click' this.closeModal}}>
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="icon-clear">
+                    <path class="primary" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L12 10.586l6.293-6.293a1 1 0 111.414 1.414L13.414 12l6.293 6.293a1 1 0 01-1.414 1.414L12 13.414l-6.293 6.293a1 1 0 01-1.414-1.414L10.586 12 4.293 5.707a1 1 0 010-1.414z">
+                    </path>
+                </svg>
+            </button>
+        </header>
+        <div class="rup-dialog__content">
+            <ul class="divide-y-2 divide-gray-100 p-2">
+                {{#each this.cartData as |item|}}
+                    <li class="flex justify-between items-center p-3 rounded hover:rounded hover:bg-indigo-600 hover:text-indigo-200 listItem">{{item.name}}</li>
+                {{/each}}
+            </ul>
+        </div>
+        <footer class="rup-dialog__controls gap-x-2">
+            <a class="px-5 py-2 text-indigo-700 transition-colors duration-150 rounded-lg focus:shadow-outline hover:bg-indigo-500 hover:text-indigo-100" href="../../../checkout/index.html">Proceed to checkout</a>
+            <a class="px-5 py-2 text-blue-100 transition-colors duration-150 bg-blue-600 rounded-lg focus:shadow-outline hover:bg-blue-700" href="../../../checkout/index.html">Buy Now</a>
+        </footer>
+    </div>
+</div>
+{{/in-element}}
